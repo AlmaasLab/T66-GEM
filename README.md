@@ -15,7 +15,7 @@ If you use iVS1191 please cite the following paper:
 ### Keywords
 
 **Utilisation:** model template; _in silico_ strain design; multi-omics integrative analysis  
-**Field:** metabolic-network reconstruction 
+**Field:** metabolic-network reconstruction  
 **Type of model:** reconstruction; curated  
 **Model source:** [iVS1191](https://doi.org/10.1002/bit.27726)  
 **Omic source:** genomics; transcriptomics; metabolomics  
@@ -40,9 +40,9 @@ The following code shows how the model can be read and written:
 * In Matlab using either COBRA or RAVEN:
   ```matlab
   cd ./code
-  % Loading and saving using COBRA, for RAVEN use toolbox="raven" instead
-  model = loadT66Model(toolbox="cobra"); % loading
-  saveT66Model(model, toolbox="cobra");    % saving
+  % For RAVEN use toolbox="raven" instead
+  model = loadT66Model(toolbox='cobra'); % loading
+  saveT66Model(model, toolbox='cobra');    % saving
   ```
 
 * In Python using cobrapy:
