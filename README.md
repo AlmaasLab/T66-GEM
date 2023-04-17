@@ -1,62 +1,56 @@
-> Introduction (please delete after reading):  
-[standard-GEM](https://github.com/MetabolicAtlas/standard-GEM) is a template repository that aims to standardize the format of genome-scale metabolic models (GEMs) versioned with git. In addition to encouraging the open-sourcing of GEMs, it facilitates the import of GEMs into databases and online websites. Moreover, it provides the community with a familiar structure that is easy to adopt through this repository itself. The template comes with a set of requirements and recommendations, packaged as to-do items in a hidden Markdown file in this repository `.standard-GEM.md`. After downloading this repository, or using it as a template, those to-do items provide guidance to how adherence to the standard can be obtained.
+## iVS1191: Genome-scale metabolic model of _Aurantiochytrium_ sp. T66
 
-> Instructions for this `README` (please delete after reading):  
-This is the `README.md` template provided by [standard-GEM](https://github.com/MetabolicAtlas/standard-GEM) and was crafted to cover most use-cases.  
-Feel free to edit this template `README`. Blanks are indicated by `{{ test }}`. One may use a search function to find these `{{`. Here are some examples of blanks used throughout this file: `{{organization or username}}` is the organization name or username for this GitHub repository, eg. `SysBioChalmers`; `{{repository name}}` is the name of this GitHub repository, eg. `yeast-GEM`.  
-If you find this template does not fit your needs, we would appreciate if you could report this by creating a new issue on [standard-GEM](https://github.com/MetabolicAtlas/standard-GEM/issues).
+[![GitHub version](https://badge.fury.io/gh/AlmaasLab%2FiVS1191.svg)](https://badge.fury.io/gh/AlmaasLab%2FiVS1191) 
+[![Zenodo](https://zenodo.org/badge/{{Zenodo ID}}.svg)](https://zenodo.org/badge/latestdoi/{{Zenodo ID}})
 
+### Description
 
-## {{repository name}}: {{repository description}}
+This repository contains the genome-scale metabolic model (GEM) of the thraustochytrid _Aurantiochytrium_ sp. T66. Considerably improving on the model quality and scope to that of previously published thraustochytrid GEMs, this model provides a great starting point for conducting research on thraustochytrids as microbial cell factories.
 
-[![Version](https://badge.fury.io/gh/{{organization or username}}%2F{{repository name}}.svg)](https://badge.fury.io/gh/sysbiochalmers/yeast-gem)  
-[![Zenodo](https://zenodo.org/badge/{{Zenodo ID}}.svg)](https://zenodo.org/badge/latestdoi/{{Zenodo ID}})  
-[![Gitter chat](https://badges.gitter.im/{{organization or username}}/{{repository name}}.svg)](https://gitter.im/{{organization or username}}/{{repository name}})
+### Citation
 
+If you use iVS1191 please cite the following paper:
+> Simensen, V., Voigt, A., Almaas, E. High-quality genome-scale metabolic model of Aurantiochytrium sp. T66. Biotechnology and Bioengineering, 118:2105–2117 (2021) [doi:10.1002/bit.27726](https://doi.org/10.1002/bit.27726)
 
-#### Description
+### Keywords
 
-{{ fill in a short description or the paper abstract }}
-
-
-#### Citation
-
-{{ provide the citation once available, for example:
-  > Lu, H., Li, F., Sánchez, B.J. et al (2019). A consensus S. cerevisiae metabolic model Yeast8 and its ecosystem for comprehensively probing cellular metabolism. Nat Commun 10, 3586 [doi:10.1038/s41467-019-11581-3](https://doi.org/10.1038/s41467-019-11581-3)
-
-}}
-
-
-#### Keywords
-
-> Keywords are be separated by semicolons.
-> The `Model source` field contains the source(s) of the current model, eg existing GEMs. If possible, use the Markdown format to add the URL with the DOI. The (NCBI) taxonomy ID should be provided in the [format from identifiers.org](https://registry.identifiers.org/registry/taxonomy). For the genome identifier, please provide the ENA/GenBank/RefSeq identifier via *identifiers.org*, or from other sources such as PATRIC or KBase.  
-
-**Utilisation:** {{ experimental data reconstruction; multi-omics integrative analysis;, _in silico_ strain design; model template }}  
-**Field:** {{ metabolic-network reconstruction }}  
-**Type of model:** {{ reconstruction; curated }}  
-**Model source:** {{ [YeastMetabolicNetwork](http://doi.org/10.1038/nbt1492) }}  
-**Omic source:** {{ genomics; metabolomics }}  
-**Taxonomic name:** {{ _Saccharomyces cerevisiae_ }}  
-**Taxonomy ID:** {{ [taxonomy:559292](https://identifiers.org/taxonomy:559292) }}  
-**Genome ID:** {{ [insdc.gca:GCA_000146045.2](https://identifiers.org/insdc.gca:GCA_000146045.2)  }}  
-**Metabolic system:** {{ general metabolism }}  
-**Tissue:**  
-**Bioreactor:**    
-**Cell type:**  
-**Cell line:**  
-**Strain:** {{ S288C }}  
-**Condition:** {{ aerobic; glucose-limited; defined media }}  
-
+**Utilisation:** model template; _in silico_ strain design; multi-omics integrative analysis  
+**Field:** metabolic-network reconstruction 
+**Type of model:** reconstruction; curated  
+**Model source:** [iVS1191](https://doi.org/10.1002/bit.27726)  
+**Omic source:** genomics; transcriptomics; metabolomics  
+**Taxonomic name:** _Aurantiochytrium_ sp. T66  
+**Taxonomy ID:** [taxonomy:1749249](https://identifiers.org/taxonomy:1749249)   
+**Genome ID:** [insdc.gca:GCA_001462505.1](https://identifiers.org/insdc.gca:GCA_001462505.1)   
+**Metabolic system:** general metabolism  
+**Condition:** aerobic; glucose-limited; defined media
 
 ### Installation
 
-{{ Be mindful of users who do not have a typical background - provide a clear overview of the required software. Also, there might be different requirements for users and collaborators. }}
-
+If you want to use the model, any software that accepts SBML L3V1 FBCv3 formatted model files will work. We recommend the following as they are well-maintained and used by most researchers in the constraint-based metabolic modeling community:
+* MATLAB
+  * [COBRA Toolbox](https://github.com/opencobra/cobratoolbox)
+  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN)
+* Python
+  * [cobrapy](https://github.com/opencobra/cobrapy)
 
 ### Usage
 
-{{ Describe how to load and save the model. }}
+The following code shows how the model can be read and written:
+* In Matlab using either COBRA or RAVEN:
+  ```matlab
+  cd ./code
+  % Loading and saving using COBRA, for RAVEN use toolbox="raven" instead
+  model = loadT66Model(toolbox="cobra"); % loading
+  saveT66Model(model, toolbox="cobra");    % saving
+  ```
+
+* In Python using cobrapy:
+  ```python
+  import code.io as io
+  model = io.read_t66_model() # loading
+  io.write_t66_model(model)   # saving
+  ```
 
 
 ### Contributing
