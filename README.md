@@ -40,8 +40,8 @@ The following code shows how the model can be read and written:
 * In Matlab using either COBRA or RAVEN:
   ```matlab
   cd ./code
-  % For RAVEN use cobra=false instead
-  cobra = false;
+  % For RAVEN use cobra = false
+  cobra = true;
   model = loadT66Model(cobra); % loading
   saveT66Model(model);    % saving
   ```
