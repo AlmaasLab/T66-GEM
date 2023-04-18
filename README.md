@@ -1,7 +1,7 @@
 ## iVS1191: Genome-scale metabolic model of _Aurantiochytrium_ sp. T66
 
 [![GitHub version](https://badge.fury.io/gh/AlmaasLab%2FiVS1191.svg)](https://badge.fury.io/gh/AlmaasLab%2FiVS1191) 
-[![Zenodo](https://zenodo.org/badge/{{Zenodo ID}}.svg)](https://zenodo.org/badge/latestdoi/{{Zenodo ID}})
+[![DOI](https://zenodo.org/badge/628947714.svg)](https://zenodo.org/badge/latestdoi/628947714)
 
 ### Description
 
