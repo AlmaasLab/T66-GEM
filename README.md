@@ -40,9 +40,10 @@ The following code shows how the model can be read and written:
 * In Matlab using either COBRA or RAVEN:
   ```matlab
   cd ./code
-  % For RAVEN use toolbox="raven" instead
-  model = loadT66Model(toolbox='cobra'); % loading
-  saveT66Model(model, toolbox='cobra');    % saving
+  % For RAVEN use cobra=false instead
+  cobra = false;
+  model = loadT66Model(cobra); % loading
+  saveT66Model(model);    % saving
   ```
 
 * In Python using cobrapy:
