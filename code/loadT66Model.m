@@ -35,15 +35,15 @@ scriptFolder = fileparts(which(mfilename));
 currentDir = cd(scriptFolder);
 cd(currentDir)
 if cobra && hasCobra
-    model = readCbModel('../model/Copy_of_iVS1191.xml');
+    model = readCbModel('../model/iVS1191.xml');
 elseif cobra && ~hasCobra && hasRaven
     warning('COBRA cannot be found, using RAVEN format instead');
-    model = importModel('../model/Copy_of_iVS1191.xml');
+    model = importModel('../model/iVS1191.xml');
 elseif ~cobra && hasRaven
-    model = importModel('../model/Copy_of_iVS1191.xml');
+    model = importModel('../model/iVS1191.xml');
 elseif ~cobra && ~hasRaven && hasCobra
     warning('RAVEN cannot be found, using COBRA format instead');
-    model = readCbModel('../model/Copy_of_iVS1191.xml');
+    model = readCbModel('../model/iVS1191.xml');
 else
     error('Neither COBRA or RAVEN is available')
 end
