@@ -1,4 +1,4 @@
-## iVS1191: Genome-scale metabolic model of _Aurantiochytrium_ sp. T66
+## T66-GEM: Genome-scale metabolic model of _Aurantiochytrium_ sp. T66
 
 [![GitHub version](https://badge.fury.io/gh/AlmaasLab%2FiVS1191.svg)](https://badge.fury.io/gh/AlmaasLab%2FiVS1191) 
 [![DOI](https://zenodo.org/badge/628947714.svg)](https://zenodo.org/badge/latestdoi/628947714)
@@ -9,7 +9,7 @@ This repository contains the genome-scale metabolic model (GEM) of the thraustoc
 
 ### Citation
 
-If you use iVS1191 please cite the following paper:
+If you use T66-GEM please cite the following paper:
 > Simensen, V., Voigt, A., Almaas, E. High-quality genome-scale metabolic model of Aurantiochytrium sp. T66. Biotechnology and Bioengineering, 118:2105–2117 (2021) [doi:10.1002/bit.27726](https://doi.org/10.1002/bit.27726)
 
 ### Keywords
@@ -60,4 +60,4 @@ Contributions are always welcome! Please read the [contributing guideline](.gith
 
 ### Contributors
 
-Code contributors are reported automatically by GitHub under [Contributors](https://github.com/AlmaasLab/iVS1191/graphs/contributors), while other contributions come in as [Issues](https://github.com/AlmaasLab/iVS1191/issues).
+Code contributors are reported automatically by GitHub under [Contributors](https://github.com/AlmaasLab/T66-GEM/graphs/contributors), while other contributions come in as [Issues](https://github.com/AlmaasLab/T66-GEM/issues).
