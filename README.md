@@ -47,9 +47,9 @@ The following code shows how the model can be read and written:
 
 * In Python using cobrapy:
   ```python
-  import code.io as io
-  model = io.read_t66_model() # loading
-  io.write_t66_model(model)   # saving
+  from model_io import read_t66_model, write_t66_model
+  model = read_t66_model() # loading
+  write_t66_model(model)   # saving
   ```
 
 
