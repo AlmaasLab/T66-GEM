@@ -29,8 +29,7 @@ If you use iVS1191 please cite the following paper:
 
 If you want to use the model, any software that accepts SBML L3V1 FBCv3 formatted model files will work. We recommend the following as they are well-maintained and used by most researchers in the constraint-based metabolic modeling community:
 * MATLAB
-  * [COBRA Toolbox](https://github.com/opencobra/cobratoolbox)
-  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN)
+  * [COBRA Toolbox](https://github.com/opencobra/cobratoolbox) and [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN)
 * Python
   * [cobrapy](https://github.com/opencobra/cobrapy)
 
