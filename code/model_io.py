@@ -80,6 +80,4 @@ def save_txt_model(model: cobra.Model, filename: str):
     
 
 if __name__ == '__main__':
-    model = read_t66_model(sanity_check=True)
-    for rxn in model.reactions:
-        print(type(rxn.compartments))
+    pass
