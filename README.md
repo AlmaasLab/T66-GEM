@@ -25,6 +25,12 @@ If you use T66-GEM please cite the following paper:
 **Metabolic system:** general metabolism  
 **Condition:** aerobic; glucose-limited; defined media
 
+### Model Overview
+
+| Taxonomy | Template Model | Reactions | Metabolites| Genes | Memote score |
+| ------------- |:-------------:|:-------------:|:-------------:|-----:|-----:|
+| _Aurantiochytrium_ sp. T66 | iVS1191 | 2095 | 1657 | 1191 | 90%|
+
 ### Installation
 
 If you want to use the model, any software that accepts SBML L3V1 FBCv3 formatted model files will work. We recommend the following as they are well-maintained and used by most researchers in the constraint-based metabolic modeling community:
