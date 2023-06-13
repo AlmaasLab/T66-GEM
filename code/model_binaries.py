@@ -3,7 +3,7 @@ from model_io import read_t66_model
 import pandas as pd
 
 
-MODEL_PATH = 'model/iVS1191'
+MODEL_PATH = 'model/T66-GEM'
 
 
 def build_binaries():
@@ -27,7 +27,7 @@ def save_xlsx_model(model: cobra.Model, filename: str):
     Parameters
     ----------
     model : cobra.Model
-        iVS1191 model to be written
+        T66-GEM model to be written
     filename : str
         Name of .txt file
     """
@@ -85,7 +85,7 @@ def save_xlsx_model(model: cobra.Model, filename: str):
     model_df = pd.DataFrame(model_dict_list)
 
     # Write to .xlsx file
-    with pd.ExcelWriter('model/iVS1191.xlsx') as writer:
+    with pd.ExcelWriter('model/T66-GEM.xlsx') as writer:
         rxn_df.to_excel(writer, sheet_name='RXNS', index=False)
         met_df.to_excel(writer, sheet_name='METS', index=False)
         comp_df.to_excel(writer, sheet_name='COMPS', index=False)

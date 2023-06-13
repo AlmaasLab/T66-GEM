@@ -3,12 +3,12 @@ import json
 import pandas as pd
 
 
-MODEL_PATH = 'model/iVS1191'
+MODEL_PATH = 'model/T66-GEM'
 
 
-def read_t66_model(sanity_check: bool  = False):
+def read_t66_model(sanity_check: bool = False):
     """
-    Imports the T66 GEM by reading the SBML file using cobrapy. Optionally
+    Imports the T66-GEM by reading the SBML file using cobrapy. Optionally
     performs some sanity checks to ensure that the model has been imported 
     correctly.
 
@@ -20,7 +20,7 @@ def read_t66_model(sanity_check: bool  = False):
     Returns
     ------- 
     model : cobra.Model
-        iVS1191 model object
+        T66-GEM model object
     """
     # Load model
     model = cobra.io.read_sbml_model(f'{MODEL_PATH}.xml')
@@ -50,7 +50,7 @@ def write_t66_model(model: cobra.Model):
     Parameters
     ----------
     model : cobra.Model
-        iVS1191 model to be written
+        T66-GEM model to be written
     """
     cobra.io.write_sbml_model(model, f'{MODEL_PATH}.xml')
     cobra.io.save_yaml_model(model, f'{MODEL_PATH}.yml')
@@ -59,12 +59,12 @@ def write_t66_model(model: cobra.Model):
 
 def save_txt_model(model: cobra.Model, filename: str):
     """
-    Writes the model as an .txt file.
+    Writes the model as a .txt file.
 
     Parameters
     ----------
     model : cobra.Model
-        iVS1191 model to be written
+        T66-GEM model to be written
     filename : str
         Name of .txt file
     """

@@ -1,9 +1,9 @@
 function saveT66Model(model, allowNoGrowth)
-%saveT66Model Saves the iVS1191 GEM
-%   Saves the iVS1191 model as a .xml, .txt, and .yml file.
+%saveT66Model Saves the T66-GEM GEM
+%   Saves the T66-GEM model as a .xml, .txt, and .yml file.
 %
 %   Input:
-%       model         (struct) iVS1191 model to save, can be either COBRA
+%       model         (struct) T66-GEM model to save, can be either COBRA
 %                     or RAVEN format
 %       allowNoGrowth (bool, opt) if saving should be allowed whenever the
 %                     the model cannot grow aerobically on glucose, 
@@ -37,8 +37,8 @@ end
 if isfield(model, 'rules')
     model = ravenCobraWrapper(model);
 end
-model.id = 'iVS1191';
-model.name = 'iVS1191';
+model.id = 'T66-GEM';
+model.name = 'T66-GEM';
 
 scriptFolder = fileparts(which(mfilename));
 currentDir = cd(scriptFolder);
@@ -84,12 +84,12 @@ if any(strcmp({errors.severity},'Error'))
 end
 
 % Create model files (.xml and .yml)
-copyfile('tempModel.xml','../model/iVS1191.xml')
+copyfile('tempModel.xml','../model/T66-GEM.xml')
 delete('tempModel.xml');
-writeYAMLmodel(model, '../model/iVS1191.yml')
+writeYAMLmodel(model, '../model/T66-GEM.yml')
 
 % Write .txt file - based on exportForGit from RAVEN Toolbox
-fid = fopen('../model/iVS1191.txt','w');
+fid = fopen('../model/T66-GEM.txt','w');
 eqns = constructEquations(model, model.rxns, false, false, false);
 eqns = strrep(eqns,' => ', '  -> ');
 eqns = strrep(eqns,' <=> ', '  <=> ');

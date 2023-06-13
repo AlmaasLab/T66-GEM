@@ -1,6 +1,6 @@
 function model = loadT66Model(cobra)
-%loadT66Model Loads the iVS1191 GEM
-%   Load the iVS1191 model in a MATLAB environment using either COBRA
+%loadT66Model Loads the T66-GEM GEM
+%   Load the T66-GEM model in a MATLAB environment using either COBRA
 %   or RAVEN format.
 %
 %   Input:
@@ -8,7 +8,7 @@ function model = loadT66Model(cobra)
 %                   COBRA format, false for RAVEN format (default true)
 %
 %   Output:
-%       model       (struct) iVS1191 model
+%       model       (struct) T66-GEM
 %
 %   Usage: model = loadT66Model(cobra)
 %
@@ -35,15 +35,15 @@ scriptFolder = fileparts(which(mfilename));
 currentDir = cd(scriptFolder);
 cd(currentDir)
 if cobra && hasCobra
-    model = readCbModel('../model/iVS1191.xml');
+    model = readCbModel('../model/T66-GEM.xml');
 elseif cobra && ~hasCobra && hasRaven
     warning('COBRA cannot be found, using RAVEN format instead');
-    model = importModel('../model/iVS1191.xml');
+    model = importModel('../model/T66-GEM.xml');
 elseif ~cobra && hasRaven
-    model = importModel('../model/iVS1191.xml');
+    model = importModel('../model/T66-GEM.xml');
 elseif ~cobra && ~hasRaven && hasCobra
     warning('RAVEN cannot be found, using COBRA format instead');
-    model = readCbModel('../model/iVS1191.xml');
+    model = readCbModel('../model/T66-GEM.xml');
 else
     error('Neither COBRA or RAVEN is available')
 end
